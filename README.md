@@ -28,10 +28,10 @@ This grammar is intended for creating utterances expressing the intent to play m
 To better understand the parsing process, keep in mind:
 
 Rules containing named entities that are used within the music play intent are used as tags for those entities (in this grammar, it applies to <artist> and <song>).
-Everything else is tagged as unknown (<unk>) by the parser.
+The parser tags everything else as unknown (<unk>).
 
-- **TASKS**
-
+- **Task 1.1**
+  
 Task 1: Extend the English Grammar
 1.1 Extend the English JSGF grammar to cover at least the following utterances:
 ~~~
@@ -40,16 +40,6 @@ Task 1: Extend the English Grammar
 [put]<unk> [lady gaga]<artist> [on]<unk>
 ~~~
 
-Task 2: Localize the JSGF Grammar in Your Language
-2.1 Localize the extended English grammar from Task 1.1 in Russian. Feel free to add everything you think could help improve the quality of the generated utterances.
-
-2.2 Provide some sample utterances the JSGF can produce using the localized grammar.
-
-2.3 What possible issues could you run into if you were asked to extend the grammar considerably, and how would you suggest overcoming them? There is no single correct response to this question, so please share any potential issues that come to mind.
-
-2.4 Which features of your language complicate the localization or writing of the grammar? How would you solve or work around these complications?
-
-- **Task 1.1**
 
 Let`s extend the JSGF file manually and see if the results will satisfy the requirements.
 ~~~
@@ -78,7 +68,6 @@ public <music_play> =
 ~~~
 However, let`s confirm it by generating some utterance samples.
 Now, how do we approach it?
-
 We need to load a JSGF file, parse it, load utterances from it, check if the utterances match the grammar, and test it.
 It allows us to create the following scenarios as shown in `generated_utterances_en.txt`  
 ~~~
@@ -87,7 +76,16 @@ It allows us to create the following scenarios as shown in `generated_utterances
 🟢can you play lady gaga
 ~~~
 
+Task 2: Localize the JSGF Grammar in Russian
+2.1 Localize the extended English grammar from Task 1.1 in Russian. Feel free to add everything you think could help improve the quality of the generated utterances.
 
+
+
+2.2 Provide some sample utterances the JSGF can produce using the localized grammar.
+
+2.3 What possible issues could you run into if you were asked to extend the grammar considerably, and how would you suggest overcoming them? There is no single correct response to this question, so please share any potential issues that come to mind.
+
+2.4 Which features of your language complicate the localization or writing of the grammar? How would you solve or work around these complications?
 
 
 
