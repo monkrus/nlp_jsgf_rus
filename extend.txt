@@ -1,1 +1,10 @@
-
+#JSGF V1.0;
+grammar music;
+public <musicRequest> = <playMusic> | <playAlbum> | <queueArtist>;
+<playMusic> = [i want to listen to] <genre> [music]; 
+<genre> = jazz | rock | pop | classical | hip-hop;
+<playAlbum> = [play] [me] <album> [by] <artist>;
+<album> = umagumma | thriller | sgt. pepper's | pet sounds; 
+<artist> = pink floyd | michael jackson | the beatles | the beach boys;
+<queueArtist> = [put] <artist> [on];
+<artist> = lady gaga | drake | adele | rihanna;
