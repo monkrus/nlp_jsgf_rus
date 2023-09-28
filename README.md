@@ -53,52 +53,34 @@ Task 2: Localize the JSGF Grammar in Your Language
 
 Let`s extend the JSGF file manually and see if the results will satisfy the requirements.
 ~~~
-#JSGF V1.0;
-grammar music;
-public <musicRequest> = <playMusic> | <playAlbum> | <queueArtist>;
-<playMusic> = [i want to listen to] <genre> [music]; 
-<genre> = jazz | rock | pop | classical | hip-hop;
-<playAlbum> = [play] [me] <album> [by] <artist>;
-<album> = umagumma | thriller | sgt. pepper's | pet sounds; 
-<artist> = pink floyd | michael jackson | the beatles | the beach boys;
-<queueArtist> = [put] <artist> [on];
-<artist> = lady gaga | drake | adele | rihanna;
+#JSGF V1.0 utf-8 en;
+grammar music_play;
+public <music_play> =
+    [can you] (put on | play) (<artist> | <song>) |
+    [i want to listen to] <genre> [music] |
+    [play me] <album> [by] <artist> |
+    [put] <artist> [on];
+<artist> =
+    the beatles |
+    radiohead |
+    lady gaga |
+    pink floyd;
+<song> =
+    comfortably numb |
+    paranoid android |
+    let it be |
+    hey jude;
+<genre> =
+    jazz;
+<album> =
+    ummagumma;
+
 ~~~
 It allows us to create the following scenarios.
 ~~~
-🟢"i want to listen to jazz music"
-<playMusic> = [i want to listen to] <genre> [music];
-<genre> = jazz
-🟢 "play me thriller by michael jackson" 
-<playAlbum> = [play] [me] <album> [by] <artist>;
-<album> = thriller
-<artist> = michael jackson
-🟢 "put adele on" 
-<queueArtist> = [put] <artist> [on];
-<artist> = adele
-"i want to listen to rock music"
-<playMusic> = [i want to listen to] <genre> [music];
-<genre> = rock
-"play sgt. pepper's by the beatles"
-<playAlbum> = [play] [me] <album> [by] <artist>;
-<album> = sgt. pepper's
-<artist> = the beatles
-"put rihanna on"
-<queueArtist> = [put] <artist> [on];
-<artist> = rihanna
-"i want to listen to hip-hop music"
-<playMusic> = [i want to listen to] <genre> [music];
-<genre> = hip-hop
-"play pet sounds by the beach boys"
-<playAlbum> = [play] [me] <album> [by] <artist>;
-<album> = pet sounds
-<artist> = the beach boys
-"put drake on"
-<queueArtist> = [put] <artist> [on];
-<artist> = drake
-"i want to listen to classical music"
-<playMusic> = [i want to listen to] <genre> [music];
-<genre> = classical
+🟢put on play me ummagumma by the beatles
+🟢can you put on i want to listen to jazz music
+🟢can you play lady gaga
 ~~~
 Looks like we satisfied the requirements. 
 However, let`s confirm it by generating some utterance samples.
