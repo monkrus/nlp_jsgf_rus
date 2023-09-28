@@ -76,16 +76,18 @@ public <music_play> =
     ummagumma;
 
 ~~~
-It allows us to create the following scenarios.
+However, let`s confirm it by generating some utterance samples.
+Now, how do we approach it?
+
+We need to load a JSGF file, parse it, load utterances from it, check if the utterances match the grammar, and test it.
+It allows us to create the following scenarios as shown in `generated_utterances_en.txt`  
 ~~~
 🟢put on play me ummagumma by the beatles
 🟢can you put on i want to listen to jazz music
 🟢can you play lady gaga
 ~~~
-Looks like we satisfied the requirements. 
-However, let`s confirm it by generating some utterance samples.
-Now, how do we approach it?
-We need to load a JSGF file, parse it, load utterances from it, check that the utterances match the grammar, and test it.
+
+
 
 
 
