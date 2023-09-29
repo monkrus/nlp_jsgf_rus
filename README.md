@@ -92,13 +92,30 @@ Task 2: Localize the JSGF Grammar in Russian
 
 
 -  **Task 2** Let's think about how we approach the Russian localization.
-  Firstly, there might be something to consider:
+-  
+🟡Does it need to be preprocessed?
+This is truly an open question, but we might consider the following:
 
-🟡Does it need to be preprocessed/lemmatized?
+- Normalization: Since Russian has a more flexible word order than English, it can help to normalize the word order first before translation.
+  "Я пошел в магазин" instead of "Я в магазин пошел".
+
+- Lemmatization: Reducing inflected forms of words to their base lemma form.
+  "идти" instead of "шел", "ходил", "пойду" 
+
+- Tokenization: Breaking input text into linguistic units like words, phrases, and symbols.
+  
+- Aligning source words/phrases to target translations helps learn translation patterns.
+  E.g. ("went") and ("пошёл").
+  
+- Phonetic transcription: Converting words to phonetic representations can help adapt pronunciations to the target language.
+
  
 🟡The input format could be in Russian or English. `Включи rock музыку`
+
 🟡Original English names need to be adapted to Russian. `параноид андроид`
+
 🟡Ending of noun change in (colloquial) speech.  `бибера`
+
 🟡Slang could be used. `забацай`
 ~~~
 #JSGF V1.0 utf-8 ru;
