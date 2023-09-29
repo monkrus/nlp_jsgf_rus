@@ -91,6 +91,32 @@ Task 2: Localize the JSGF Grammar in Russian
 
 
 
--  **Task 2.1** Lets think about how we approach the Russian loclaization.
+-  **Task 2** Let's think about how we approach the Russian localization.
+  Firstly, there might be something to consider:
 
+ Does it need to be preprocessed/lemmatized?
+ 
+ The input format could be in Russian or English.
+ Original English names need to be adapted to Russian. 
+ Ending of noun change in (colloquial) speech. 
+ Slang could be used.
+~~~
+#JSGF V1.0 utf-8 ru;
+
+grammar music_play;
+
+public <music_play> =
+    [(ты можешь) | (можешь ли)] (включи(ть) | играй | поставь | забацай | вруби(ть)) (<artist> | <song>) |
+    [(я хочу послушать) | (хочу послушать) | (кинь мне)] <genre> [музыку] |
+    [(воспроизведи мне) | (включи) | (проиграй) | (давай) | (поставь)] <album> [(от) | (открой)] <artist>;
+
+<artist> = (Битлы | Битлз) | радиохэд | леди гага | (пинк флойд | пинк флойда) | (бибер | бибера) | (джексон | джексона);
+
+<song> = комфортабли намб | параноид андроид | пусть будет так | хей джуд | бумеранг | (билли джин);
+
+<genre> = (джаз | джаза) | басы | трэп | чилаут | хип-хоп | (рок | рока) | (классика | классическая) | электро | поп;
+
+<album> = уммагумма | чилаут-микс | фристайл-баттлы | (лучшие хиты | хиты) | (песни о любви | любовные песни);
+~~~ 
+   
 
