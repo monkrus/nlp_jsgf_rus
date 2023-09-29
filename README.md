@@ -94,12 +94,12 @@ Task 2: Localize the JSGF Grammar in Russian
 -  **Task 2** Let's think about how we approach the Russian localization.
   Firstly, there might be something to consider:
 
- Does it need to be preprocessed/lemmatized?
+🟡Does it need to be preprocessed/lemmatized?
  
- The input format could be in Russian or English.
- Original English names need to be adapted to Russian. 
- Ending of noun change in (colloquial) speech. 
- Slang could be used.
+🟡The input format could be in Russian or English. `Включи rock музыку`
+🟡Original English names need to be adapted to Russian. `параноид андроид`
+🟡Ending of noun change in (colloquial) speech.  `бибера`
+🟡Slang could be used. `забацай`
 ~~~
 #JSGF V1.0 utf-8 ru;
 
@@ -114,7 +114,7 @@ public <music_play> =
 
 <song> = комфортабли намб | параноид андроид | пусть будет так | хей джуд | бумеранг | (билли джин);
 
-<genre> = (джаз | джаза) | басы | трэп | чилаут | хип-хоп | (рок | рока) | (классика | классическая) | электро | поп;
+<genre> = музыку|(джаз | джаза) | басы | трэп | чилаут | хип-хоп | (рок | рока) | (классика | классическая) | электро | поп;
 
 <album> = уммагумма | чилаут-микс | фристайл-баттлы | (лучшие хиты | хиты) | (песни о любви | любовные песни);
 ~~~ 
