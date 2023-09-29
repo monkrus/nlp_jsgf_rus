@@ -79,8 +79,6 @@ It allows us to create the following scenarios as shown in `generated_utterances
 Task 2: Localize the JSGF Grammar in Russian
 2.1 Localize the extended English grammar from Task 1.1 in Russian. Feel free to add everything you think could help improve the quality of the generated utterances.
 
-
-
 2.2 Provide some sample utterances the JSGF can produce using the localized grammar.
 
 2.3 What possible issues could you run into if you were asked to extend the grammar considerably, and how would you suggest overcoming them? There is no single correct response to this question, so please share any potential issues that come to mind.
@@ -93,13 +91,15 @@ This is truly an open question, but we might consider the following:
 1. Normalization: Since Russian has a more flexible word order than English, it can help to normalize the word order first before translation.
   "Я пошел в магазин" instead of "Я в магазин пошел".
 
-2. Lemmatization: Reducing inflected forms of words to their base lemma form.
-  "идти" instead of "шел", "ходил", "пойду" 
-3. Tokenization: Breaking input text into linguistic units like words, phrases, and symbols.
-4. Aligning source words/phrases to target translations helps learn translation patterns.
+3. Lemmatization: Reducing inflected forms of words to their base lemma form.
+  "идти" instead of "шел", "ходил", "пойду"
+
+5. Tokenization: Breaking input text into linguistic units like words, phrases, and symbols.
+   
+7. Aligning source words/phrases to target translations helps learn translation patterns.
   E.g. ("went") and ("пошёл").
  
-6. Phonetic transcription: Converting words to phonetic representations can help adapt pronunciations to the target language.
+8. Phonetic transcription: Converting words to phonetic representations can help adapt pronunciations to the target language.
 
 🟡The input format could be in Russian or English. `Включи rock музыку`
 
